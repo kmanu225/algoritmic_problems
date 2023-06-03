@@ -1,7 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "Disabled",
-    "files.associations": {
-        "*.rmd": "markdown",
-        "p50.C": "cpp"
-    }
-}
