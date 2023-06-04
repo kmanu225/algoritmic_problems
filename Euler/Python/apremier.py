@@ -53,27 +53,8 @@ def isprime(n):
     return True
 
 
-max = 0
-p = None
+
+
 if __name__ == "__main__":
-    # for i in range(900, 1000) :
-    #     if isprime(i+1) and (10**i-1)//(i+1) > max :
-    #         p=1+i
-    #         max = (10**i-1)//(i+1)
-    i = 910
-    max = (10**i - 1) // (i + 1)
-    print(i, max)
-
     nbmax = 1000
-    print([p for p in range(900, nbmax) if isprime(p)])
-    # t0 = time()
-    # for i in range(1000000) :
-    #     isprime(i)
-    # t1 = time()
-    # print("dt1 : ", t1-t0)
-
-    # for i in range(1000000) :
-    #     isprimeNew(i)
-    # t2 = time()
-
-    # print("\ndt2(nouveau isprime-Tehe) : ", t2-t1)
+    print([p for p in range(nbmax) if isprime(p)])

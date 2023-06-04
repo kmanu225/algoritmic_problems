@@ -1,35 +1,32 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
 #include "apremier.h"
 
 
-bool isprime(long n){
-    if(n<2){
-        return 0;
+
+bool isprime(int n)
+{
+    if (n < 2)
+    {
+        return false;
+    }
+    else if (n == 2 || n == 3)
+    {
+        return true;
+    }
+    else if (n % 2 == 0 || n % 3 == 0)
+    {
+        return false;
     }
 
-    else if((n==2) || (n == 3)){
-        return 1;
-    }
-
-    else if ((n%2==0) || (n%3==0)) {
-        return 0;
-    }
-
-    else {
-        
-        for (int i = 5; i<sqrt(n)+1; i++){
-            if (n%i == 0) {
-                return 0;
-            }
+    int k;
+    for (k = 5; k * k <= n; k += 6)
+    {
+        if (n % k == 0 || n % (k + 2) == 0)
+        {
+            return false;
         }
-
-        return 1;
-
     }
-    
+
+    return true;
 }
 
 

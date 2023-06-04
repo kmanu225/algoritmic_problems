@@ -35,12 +35,12 @@ def sumDivStrict(n):
 
 
 def divPremier(n):
-    divisors = []
-    for i in range(1, int(m.sqrt(n)) + 1):
-        if n % i == 0 and isprime(i):
-            divisors.append(i)
+    if isprime(n):
+        return [n]
 
+    divisors = [i for i in range(n) if isprime(i) and n % i == 0]
     divisors.sort()
+
     return divisors
 
 
