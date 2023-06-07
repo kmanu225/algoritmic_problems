@@ -38,3 +38,4 @@ def solve():
 if __name__ == "__main__":
     solutions = solve()
     print(solutions)
+# [[1487, 4817, 8147], [2969, 6299, 9629]]
